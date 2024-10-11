@@ -33,7 +33,7 @@ public class producto_nexsys implements Serializable{
 	private String description;
 	
 	@Column
-	private int categoryPlatzi;
+	private int categoryId;
 	
 	@Column
 	private String imageUrl;
@@ -41,7 +41,7 @@ public class producto_nexsys implements Serializable{
 	@Override
 	public String toString() {
 		return "Producto [idProducto=" + idProducto + ", name=" + name + ", priceFinal=" + priceFinal + ", description="
-				+ description + ", categoryId=" + categoryPlatzi + ", imageUrl=" + imageUrl + "]";
+				+ description + ", categoryId=" + categoryId + ", imageUrl=" + imageUrl + "]";
 	}
 
 	public Long getIdProducto() {
