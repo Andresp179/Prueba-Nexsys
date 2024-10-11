@@ -10,6 +10,12 @@ public class postDao {
 	public postDao() {
 		super();
 	}
+	@Override
+	public String toString() {
+		return "postDao [id=" + id + ", title=" + title + ", price=" + price + ", category=" + category + ", images="
+				+ images + "]";
+		
+	}
 	public postDao(Integer id, String title, Integer price, String category, String images) {
 		super();
 		this.id = id;
