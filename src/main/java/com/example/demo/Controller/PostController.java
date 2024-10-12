@@ -26,12 +26,12 @@ public class PostController {
 	@Autowired
 	private postDaoService PostDaoService;
 
-	@GetMapping("/postProductos")
+	@GetMapping("/nexsys/v1/product/")
 	public ResponseEntity<List<postDao>> getPosts() {
 		return new ResponseEntity<>(PostDaoService.getPostProducts(), HttpStatus.OK);
 	}
 
-	@GetMapping("/post/{id}")
+	@GetMapping("/nexsys/v1/product/{id}")
 	public ResponseEntity<postDao> get(@PathVariable Integer id) {
 		return new ResponseEntity<>(PostDaoService.get(id), HttpStatus.OK);
 	}
