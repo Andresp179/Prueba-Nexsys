@@ -30,7 +30,7 @@ public class PostDaoRepository {
 		Producto.setPriceFinal(postDao.getPrice());
 		Producto.setDescription(postDao.getDescription());
 		Producto.setCategoryId(postDao.getId());
-		Producto.setImageUrl(postDao.getImages());
+		//Producto.setImageUrl(postDao.getImages());
 		
 		
 		return productService.guardar(Producto);
