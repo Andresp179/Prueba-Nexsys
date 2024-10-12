@@ -13,7 +13,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "producto")
-public class producto_nexsys implements Serializable{
+public class Producto_nexsys implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 
@@ -47,8 +47,9 @@ public class producto_nexsys implements Serializable{
 	public Long getIdProducto() {
 		return idProducto;
 	}
+	public Producto_nexsys() {}
 
-	public producto_nexsys(Long idProducto, String name, int priceFinal, String description, int categoryId, String imageUrl) {
+	public Producto_nexsys(Long idProducto, String name, int priceFinal, String description, int categoryId, String imageUrl) {
 		super();
 		this.idProducto = idProducto;
 		this.name = name;

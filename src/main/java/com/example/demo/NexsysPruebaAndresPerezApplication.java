@@ -11,7 +11,6 @@ public class NexsysPruebaAndresPerezApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(NexsysPruebaAndresPerezApplication.class, args);
 	}
-
 	
 	@Bean
 	public RestTemplate restTemplate() {		

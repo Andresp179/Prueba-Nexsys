@@ -8,37 +8,37 @@ import java.util.Optional;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import com.example.demo.Models.producto_nexsys;
-import com.example.demo.Repository.producto_nexsysDao;
+import com.example.demo.Models.Producto_nexsys;
+import com.example.demo.Repository.Producto_nexsysDao;
 
 
-public class producto_nexsysServiceImpl implements producto_nexsysService {
+public class Producto_nexsysServiceImpl implements Producto_nexsysService {
 
-	private producto_nexsysDao productoServiceDao;
+	private Producto_nexsysDao productoServiceDao;
 	private  JdbcTemplate jdbcTemplate;
 	@Override
-	public List<producto_nexsys> listaProductos() {
-		return (List<producto_nexsys>) productoServiceDao.findAll();
+	public List<Producto_nexsys> listaProductos() {
+		return (List<Producto_nexsys>) productoServiceDao.findAll();
 	}
 
 	@Override
-	public void guardar(producto_nexsys producto) {		
-		productoServiceDao.save(producto);
+	public Producto_nexsys guardar(Producto_nexsys producto) {		
+		return productoServiceDao.save(producto);
 	}
 
 	@Override
-	public void eliminar(producto_nexsys producto) {
-		productoServiceDao.delete(producto);		
+	public void eliminar(Producto_nexsys producto) {
+		 productoServiceDao.delete(producto);		
 	}
 
 	@Override
-	public Optional<producto_nexsys> encontrarProducto(producto_nexsys producto) {
+	public Optional<Producto_nexsys> encontrarProducto(Producto_nexsys producto) {
 		// TODO Auto-generated method stub
 		return productoServiceDao.findById(producto.getIdProducto());
 	}
 
 	@Override
-	public int[] batchUpdateUsingJdbcTemplate(List<producto_nexsys> productos) {
+	public int[] batchUpdateUsingJdbcTemplate(List<Producto_nexsys> productos) {
 		return jdbcTemplate.batchUpdate("INSERT INTO producto_nexsys VALUES (?, ?, ?, ?,?)", (BatchPreparedStatementSetter) new BatchPreparedStatementSetter() {
 
             @Override
