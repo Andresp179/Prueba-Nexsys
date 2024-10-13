@@ -16,4 +16,6 @@ public class NexsysPruebaAndresPerezApplication {
 	public RestTemplate restTemplate() {		
 		return new RestTemplate(); //Para poder consumir la otra API
 	}
+	
+	
 }

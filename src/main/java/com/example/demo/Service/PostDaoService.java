@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.core.ParameterizedTypeReference;
 import com.example.demo.Repository.PostDao;
-import com.example.demo.Repository.Producto_nexsysDao;
 import java.util.Arrays;
 import org.springframework.http.HttpEntity;
 

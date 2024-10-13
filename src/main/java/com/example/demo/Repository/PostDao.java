@@ -4,7 +4,7 @@ import java.util.List;
 
 public class PostDao {
 
-	private Integer id;
+	private Long id;
 	private String title;
 	private Integer price;
 	private String description;
@@ -24,11 +24,11 @@ public class PostDao {
 
 	
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -64,7 +64,7 @@ public class PostDao {
         this.images = images;
     }
 
-	public PostDao(Integer id, String title, Integer price, String description, Object category, List<String> images) {
+	public PostDao(Long id, String title, Integer price, String description, Object category,List<String> images) {
 		super();
 		this.id = id;
 		this.title = title;

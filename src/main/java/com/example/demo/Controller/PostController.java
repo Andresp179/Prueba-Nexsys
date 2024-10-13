@@ -11,8 +11,13 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+
+import com.example.demo.Models.Producto_nexsysApi;
 import com.example.demo.Repository.PostDao;
 import com.example.demo.Service.PostDaoService;
+import com.example.demo.Service.PostService;
+import com.example.demo.Service.ServiceApi;
+
 import org.springframework.web.client.RestTemplate;
 
 @RestController
@@ -27,10 +32,21 @@ public class PostController {
 	@Autowired
 	private PostDaoService postDaoService;
 
+	@Autowired
+	private ServiceApi serviceApi;
+	
+    @Autowired
+    private PostService postServise;
+	
 	@GetMapping("/nexsys/v1/product/")
 	public ResponseEntity<List<PostDao>> getPosts() {
 		return new ResponseEntity<>(postDaoService.getPostProducts(), HttpStatus.OK);
 	}
+	
+	@GetMapping("/nexsys/v1/product/savePost/{id}")
+    public Producto_nexsysApi savePost(@PathVariable Long id) {
+        return postServise.savePostFromApi(id);
+    }
 	
 	@PostMapping("/sync")
 	public ResponseEntity<PostDao> syncProductFromApi(PostDao postDao) {
