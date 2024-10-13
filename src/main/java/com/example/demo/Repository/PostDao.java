@@ -9,7 +9,7 @@ public class PostDao {
 	private Integer price;
 	private String description;
 	private Object category;
-	private List<String> images;
+	private Object images;
 
 	public PostDao() {
 		super();
@@ -56,15 +56,15 @@ public class PostDao {
 		this.category = category;
 	}
 
-	public List<String> getImages() {
+	public Object getImages() {
         return images;
     }
 
-    public void setImages(List<String> images) {
+    public void setImages(Object images) {
         this.images = images;
     }
 
-	public PostDao(Long id, String title, Integer price, String description, Object category,List<String> images) {
+	public PostDao(Long id, String title, Integer price, String description, Object category,Object images) {
 		super();
 		this.id = id;
 		this.title = title;

@@ -47,14 +47,14 @@ DROP TABLE IF EXISTS `producto_nexsys`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `producto_nexsys` (
-  `idproduct` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) DEFAULT NULL,
-  `priceFinal` int DEFAULT NULL,
-  `description` varchar(100) DEFAULT NULL,
-  `categoryId` int DEFAULT NULL,
-  `imageUrl` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idproduct`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(45) DEFAULT NULL,
+  `price` int DEFAULT NULL,
+  `description` varchar(120) DEFAULT NULL,
+  `category` text,
+  `images` longblob,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,6 +63,7 @@ CREATE TABLE `producto_nexsys` (
 
 LOCK TABLES `producto_nexsys` WRITE;
 /*!40000 ALTER TABLE `producto_nexsys` DISABLE KEYS */;
+INSERT INTO `producto_nexsys` VALUES (1,'Sleek Mirror Finish Phone Case',27,NULL,'{\"id\":2,\"name\":\"Electronics\",\"image\":\"https://i.imgur.com/ZANVnHE.jpeg\",\"creationAt\":\"2024-10-12T21:50:53.000Z\",\"updatedAt\":\"2024-10-12T21:50:53.000Z\"}',_binary '¨\Ì\0sr\0java.util.ArrayListxÅ\“ô\«aù\0I\0sizexp\0\0\0w\0\0\0t\0#[\"https://i.imgur.com/yb9UQKL.jpeg\"t\0\"\"https://i.imgur.com/m2owtQG.jpeg\"t\0#\"https://i.imgur.com/bNiORct.jpeg\"]x'),(2,'Sleek Smartwatch with Vibrant Display',16,NULL,'{\"id\":2,\"name\":\"Electronics\",\"image\":\"https://i.imgur.com/ZANVnHE.jpeg\",\"creationAt\":\"2024-10-12T21:50:53.000Z\",\"updatedAt\":\"2024-10-12T21:50:53.000Z\"}',_binary '¨\Ì\0sr\0java.util.ArrayListxÅ\“ô\«aù\0I\0sizexp\0\0\0w\0\0\0t\0#[\"https://i.imgur.com/LGk9Jn2.jpeg\"t\0\"\"https://i.imgur.com/1ttYWaI.jpeg\"t\0#\"https://i.imgur.com/sPRWnJH.jpeg\"]x');
 /*!40000 ALTER TABLE `producto_nexsys` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -75,4 +76,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-10-11 15:39:01
+-- Dump completed on 2024-10-13 15:29:04

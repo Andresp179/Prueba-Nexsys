@@ -22,13 +22,13 @@ public class Producto_nexsysApi {
 	private Integer price;
 	private String description;
 	private Object category;
-	private List<String> images;	
+	private Object images;	
 	
 	public Producto_nexsysApi() {
 		super();
 	}
 	public Producto_nexsysApi(Long id, String title, Integer price, String description, Object category,
-			List<String> images) {
+			Object images) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -67,10 +67,10 @@ public class Producto_nexsysApi {
 	public void setCategory(Object category) {
 		this.category = category;
 	}
-	public List<String> getImages() {
+	public Object getImages() {
 		return images;
 	}
-	public void setImages(List<String> images) {
+	public void setImages(Object images) {
 		this.images = images;
 	}
 
